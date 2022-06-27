@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <h1 class="center text">Resume Generator</h1>
+            <h4 class="center by ">by codeRewind Academy</h4>
+            <div class="row">
+                <div class="part1">
+                    <h3 class="center text">Personal Information</h3>
+                    <div class="form">
+                        <label for="name">Your Name</label>
+                        <input type="text" placeholder="Type Your Name"  id="name" class="fc">
+                    </div>
+                    <div class="form">
+                        <label for="contact">Your Contact Number</label>
+                        <input type="text" placeholder="Type Your Phone Number"  id="ph"class="fc">
+                    </div>
+                    <div class="form">
+                        <label for="address">Your Address</label>
+                        <textarea placeholder="Type Your Address" id="adrs" class="fc" rows="3"></textarea>
+                    </div>
+                    <div class="form">
+                        <label for="contact">Your Email Address</label>
+                        <input type="email" placeholder="Type Your @email Address" id="em" class="fc">
+                    </div>
+                    <div class="form">
+                        <label>Select Profile Picture</label>
+                        <input type="file" id="img" class="fc">
+                    </div>
+                    <p class="small">Important Links</p>
+                    <div class="form">
+                        <label for="fbLink">Facebook Link</label>
+                        <input type="text" placeholder="Type Your Facebook Link" id="fb" class="fc">
+                    </div>
+                    <div class="form">
+                        <label for="ghLink">Github Link</label>
+                        <input type="text" placeholder="Type Your Github Link" id="gh" class="fc">
+                    </div>
+                    <div class="form">
+                        <label for="ldLink">Linkdin Link</label>
+                        <input type="text" placeholder="Type Your Linkdin Link" id="ld" class="fc">
+                    </div>
+                </div>
+                <div class="part2">
+                    <h3 class="center text">Professional details </h3>
+                    <div class="form">
+                        <label for="obj">Objective</label>
+                        <textarea placeholder="Type Your Objective" id="obj" class="fc" rows="3"></textarea>
+                    </div>
+                    <div class="form" id="we">
+                        <label for="we">Your Work Experiences</label>
+                        <textarea placeholder="Type Your Work Experiences" class="fc wefield" rows="3"></textarea>
+                        <div class="box5 center" id="addwe">
+                            <button onclick="addWe()"   class="btn">Create</button>
+                            <button onclick="weDlt()"   class="btn">Delete</button>
+                        </div>
+                    </div>
+                    <div class="form" id="aq">
+                        <label for="aq">Your Academic Qualification</label>
+                        <textarea placeholder="Type Your Academic Qualification" class="fc aqfield" rows="3"></textarea>
+                        <div class="box5 center" id="addaq">
+                            <button onclick="addAq()"  class="btn">Create</button>
+                            <button onclick="aqDlt()" class="btn">Delete</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="box5 center">
+                <button onclick="genCv()" class="btn center">Genarate CV</button>
+            </div>
+        </div>
+        <!-- page2 start here -->
+        <div id="page2">
+            <div id="row1" class="row">
+                <div class="sec1">
+                    <div class="box" >
+                        <img id="imgt" class="img"
+                            src="user.jfif"
+                            alt="Profile Pic Image">
+                    </div>
+                    <div class="box box2">
+                        <h3 id="nt">Sujoy Roy</h3>
+                    </div>
+                    <div class="box box2">
+                        <p id="pht">123-456-7890</p>
+                    </div>
+                    <div class="box box2">
+                        <p id="adrst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, accusamus!</p>
+                    </div>
+                    <div class="box box2">
+                        <h3 id="emt">youremail@gmail.com</h3>  
+                    </div>
+                    <div class="box box2">
+                        <p id="fbt"><a href="#">Facebook Link</a></p>
+                    </div>
+                    <div class="box box2">
+                        <p id="ldt"><a href="#">Linkedin Link</a></p>
+                    </div>
+                    <div class="box box2">
+                        <p id="ght"><a href="#">Github Link</a></p>
+                    </div>
+                </div>
+                <div class="sec2">
+                    <h2 id="n2t" class="center text">Sujoy Roy</h2>
+                    <div class="box" id="objset">
+                        <h3>Objective</h3>
+                        <p id="objt" class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam consequuntur
+                            necessitatibus libero neque, modi aliquid hic, enim accusantium sapiente, explicabo atque iure dolor
+                            tempora perspiciatis eius tempore dolore rerum animi?</p>
+                    </div>
+                    <div class="box" id="aqset">
+                        <h3>Academic Qualification</h3>
+                        <div class="box3">
+                            <ul id="aqt">
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box" id="weset">
+                        <h3>Work Experiences</h3>
+                        <div class="box3">
+                            <ul id="wet">
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                                <li class="box1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, delectus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center"><button onclick="printCv()" class="btn">Print Resume / CV</button></div>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
